@@ -83,16 +83,16 @@
               url: image_url,
               stream: true
             }, function(error, image_res) {
-              var length, options;
+              var length, s3_put_options;
               if (error) return console.error(error);
               length = image_res.headers['content-length'];
-              options = {
+              s3_put_options = {
                 BucketName: settings.amazon.bucket,
                 ObjectName: filename,
                 ContentLength: length,
                 Body: image_res.stream
               };
-              s3.PutObject(options, function(err, data) {
+              s3.PutObject(s3_put_options, function(err, data) {
                 if (err) return console.log('** error putting S3 object:', err);
               });
               res.writeHead(200, {
@@ -117,8 +117,9 @@
           'Content-Type': 'image/jpeg'
         });
         data.Stream.pipe(res);
-        data.Stream.on('end', function() {});
-        return res.end;
+        return data.Stream.on('end', function() {
+          return res.end;
+        });
       }
     });
   };

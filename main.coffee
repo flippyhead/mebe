@@ -63,13 +63,12 @@ handleRequest = (req, res)->
             return console.error error if error
             length = image_res.headers['content-length']
 
-            options =
+            s3_put_options =
               BucketName: settings.amazon.bucket
               ObjectName: filename
               ContentLength: length
               Body: image_res.stream
-
-            s3.PutObject options, (err, data)->
+            s3.PutObject s3_put_options, (err, data)->
               console.log '** error putting S3 object:', err if err
 
             res.writeHead 200, 'Content-Type': 'image/jpeg'
@@ -86,7 +85,7 @@ handleRequest = (req, res)->
       res.writeHead 200, 'Content-Type': 'image/jpeg'
       data.Stream.pipe res
       data.Stream.on 'end', ->
-      res.end
+        res.end
 
 connect()
   .use(connect.favicon())
