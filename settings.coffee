@@ -7,5 +7,6 @@ module.exports =
     base_path: '/Data.ashx/Bing/Search/v1/Image'
     ssl: yes
   amazon:
-    access_key_id: '06C8R3RCBSGZ5VKK1FR2'
-    secret_access_key: 'RQH87M4/6ZPhJsRNiLwDao5PUjQSUlV5WaIOuIuo'
+    bucket: 'mebe-images'
+    access_key_id: 'AKIAJ4EJGRMW6EQ66QYA'
+    secret_access_key: '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'

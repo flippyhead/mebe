@@ -1,0 +1,9 @@
+#!/bin/sh -e
+# Start up essential processes, shutting down on exit.
+supervisor main.js &
+coffee --watch --compile *.coffee public/*.coffee &
+
+wait
+
+# Kill jobs on termination.
+trap 'kill $(jobs -p)' SIGINT SIGTERM

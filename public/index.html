@@ -3,8 +3,10 @@
     <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
     <meta charset="UTF-8" />
     <title>mebe - instant images</title>
-    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    <link href="bootstrap.min.css" rel="stylesheet"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="main.js"></script>
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -39,30 +41,59 @@
         margin-top: 28px;
       }
 
+      .extra {
+        display: none;
+      }
+
       blockquote {
         border-left: none;
         background-color: #efefef;
         padding: 5px;
-        margin: 0 100px;
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+      form {
+        margin-bottom: 0;
       }
     </style>
-    <link href="bootstrap-responsive.min.css" rel="stylesheet">
-
   </head>
+
   <body>
     <div class="container-narrow">
       <div class="jumbotron">
         <h1><a href="#">mebe.co</a></h1>
-        <p class="lead">An URL-based API for pictures.</p>
+        <p class="lead">An URL-based API for Pictures</p>
         <p><a href="#">mebe.co</a> helps you talk in pictures.</p>
-        <p>Simply constuct a URL describing a picture you want to see.</p>
-        <blockquote>
-          <a target="_blank" href="http://mebe.co/optimus_prime.jpeg">http://mebe.co/optimus_prime.jpeg</a>
-        </blockquote>
+        <div id="extra-extra">
+          <p class="muted">Simply constuct a URL describing a picture you want to see:</p>
+          <blockquote>
+            <a target="_blank" href="http://mebe.co/apple.jpeg">http://mebe.co/apple.jpeg</a>
+          </blockquote>
+        </div>
+        <div class="extra" id="extra-underscore">
+          <p class="muted">You can separate terms with the underscore chracter:</p>
+          <blockquote>
+            <a target="_blank" href="http://mebe.co/optimus_prime.jpeg">http://mebe.co/optimus_prime.jpeg</a>
+          </blockquote>
+        </div>
+        <div class="extra" id="extra-index">
+          <p class="muted">Get subsequent matches by appending a result number:</p>
+          <blockquote>
+            <a target="_blank" href="http://mebe.co/optimus_prime.jpeg?1">http://mebe.co/optimus_prime.jpeg?1</a>
+          </blockquote>
+        </div>
+        <div class="extra" id="extra-tryit">
+          <p class="muted">Try it for yourself:</p>
+          <blockquote>
+            <form class="form-inline">
+              <label class="checkbox">http://mebe.co/</label><input type="text" class="input-small" placeholder="Email">.jpeg
+            </form>
+          </blockquote>
+        </div>
       </div>
       <hr/>
-      <div class="footer text-center muted">
-        <!-- <p>&copy; Peter T. Brown 2013</p> -->
+      <div class="footer text-center">
+        <p>&copy; <a href="http://yeahtotally.org">Peter T. Brown</a> 2013</p>
       </div>
     </div>
   </body>
