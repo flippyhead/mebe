@@ -1,8 +1,8 @@
 {
   "name": "mebe",
-  "version": "0.0.1-22",
+  "version": "0.0.1-57",
   "dependencies": {
-    "connect": "~2.7.3",
+    "connect": "~2.7.4",
     "http-get": "~0.5.9",
     "mime": "~1.2.9",
     "awssum-amazon-s3": "~1.1.0"
