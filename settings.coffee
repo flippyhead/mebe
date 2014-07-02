@@ -8,5 +8,5 @@ module.exports =
     ssl: yes
   amazon:
     bucket: 'mebe-images'
-    access_key_id: 'AKIAJ4EJGRMW6EQ66QYA'
-    secret_access_key: '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'
+    access_key_id: 'AKIAI3F5LUJG6MLBE5LQ'
+    secret_access_key: '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'

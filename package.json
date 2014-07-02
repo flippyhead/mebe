@@ -1,6 +1,6 @@
 {
   "name": "mebe",
-  "version": "0.0.1-57",
+  "version": "0.0.1-60",
   "dependencies": {
     "connect": "~2.7.4",
     "http-get": "~0.5.9",
