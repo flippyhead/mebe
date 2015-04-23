@@ -1,6 +1,6 @@
 {
   "name": "mebe",
-  "version": "0.0.1-60",
+  "version": "0.0.1-62",
   "dependencies": {
     "connect": "~2.7.4",
     "http-get": "~0.5.9",
@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "supervisor": ">=0.5.2",
-    "jitsu": ">=0.12.8"
+    "jitsu": ">=0.13.18"
   },
   "engines": {
     "node": ">=0.8"
