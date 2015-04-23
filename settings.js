@@ -12,8 +12,8 @@
     },
     amazon: {
       bucket: 'mebe-images',
-      access_key_id: 'AKIAJ4EJGRMW6EQ66QYA',
-      secret_access_key: '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'
+      access_key_id: 'yyyy',
+      secret_access_key: 'xxxx'
     }
   };
 
