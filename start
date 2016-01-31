@@ -1,4 +1,7 @@
 #!/bin/sh -e
+export AWS_ACCESS_KEY_ID="AKIAJ2PYTAVL3SQSYGKA"
+export AWS_SECRET_ACCESS_KEY="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"
+
 # Start up essential processes, shutting down on exit.
 supervisor main.js &
 coffee --watch --compile *.coffee public/*.coffee &

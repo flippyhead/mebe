@@ -2,14 +2,16 @@
   "name": "mebe",
   "version": "0.0.1-62",
   "dependencies": {
+    "aws-sdk": "^2.2.33",
     "connect": "~2.7.4",
-    "http-get": "~0.5.9",
+    "google-images": "^1.0.0",
+    "http-get": "~0.5.10",
     "mime": "~1.2.9",
-    "awssum-amazon-s3": "~1.1.0"
+    "request": "^2.69.0"
   },
   "devDependencies": {
-    "supervisor": ">=0.5.2",
-    "jitsu": ">=0.13.18"
+    "jitsu": ">=0.13.18",
+    "supervisor": ">=0.5.2"
   },
   "engines": {
     "node": ">=0.8"
